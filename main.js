@@ -29,7 +29,7 @@ function renderQr() {
   const target = document.getElementById('qr');
   if (!target) return;
   if (typeof window.qrcode !== 'function') {
-    target.hidden = true;
+    target.closest('.share')?.setAttribute('hidden', '');
     return;
   }
   const qr = window.qrcode(0, 'M');
