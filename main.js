@@ -5,6 +5,9 @@ const TITLES = {
   en: 'Gombo Khongor — Portfolio',
 };
 const QR_MARGIN_CELLS = 0;
+// Per-deployment *.vercel.app URLs sit behind Vercel's login, so the QR always points here.
+const CANONICAL_URL = 'https://khongor-portfolio.vercel.app/';
+const LOCAL_HOSTS = ['localhost', '127.0.0.1'];
 
 function setLanguage(lang) {
   document.documentElement.lang = lang;
@@ -17,7 +20,11 @@ function setLanguage(lang) {
   }
 }
 
-/** QR for this page's own address (no query or hash), so it stays right on any domain. */
+/** QR for the public site; on a local server it points at that server instead, for testing. */
+function shareUrl() {
+  return LOCAL_HOSTS.includes(location.hostname) ? `${location.origin}${location.pathname}` : CANONICAL_URL;
+}
+
 function renderQr() {
   const target = document.getElementById('qr');
   if (!target) return;
@@ -26,7 +33,7 @@ function renderQr() {
     return;
   }
   const qr = window.qrcode(0, 'M');
-  qr.addData(`${location.origin}${location.pathname}`);
+  qr.addData(shareUrl());
   qr.make();
   target.innerHTML = qr.createSvgTag({ cellSize: 4, margin: QR_MARGIN_CELLS, scalable: true });
 }
