@@ -8,11 +8,11 @@
   <meta property="og:title" content="Gombo Khongor — Portfolio">
   <meta property="og:description" content="AI systems built for real users: receipt OCR, voice cloning, multi-agent counseling.">
   <meta property="og:type" content="profile">
-  <meta property="og:image" content="https://i.ytimg.com/vi/kTh3PQnt9d8/hqdefault.jpg">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f3a5f'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='30' font-weight='700' fill='white' text-anchor='middle'%3EGK%3C/text%3E%3C/svg%3E">
+  <meta property="og:image" content="https://khongor-portfolio.vercel.app/assets/profile.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23faf9f6'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='24' letter-spacing='2' fill='%231c1e24' text-anchor='middle'%3EGK%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>
     // Pick the language before first paint: ?lang= > saved choice > browser language.
@@ -30,197 +30,159 @@
   </script>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="#top">Gombo Khongor</a>
-      <nav class="nav" aria-label="Sections">
-        <a href="#projects"><span lang="ja">プロジェクト</span><span lang="en">Projects</span></a>
-        <a href="#experience"><span lang="ja">経歴</span><span lang="en">Experience</span></a>
-        <a href="#skills"><span lang="ja">スキル</span><span lang="en">Skills</span></a>
-      </nav>
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button type="button" data-set-lang="ja">日本語</button>
-        <button type="button" data-set-lang="en">EN</button>
-      </div>
+  <header class="site-header">
+    <a class="brand" href="#top">Gombo Khongor</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-set-lang="ja">日本語</button>
+      <button type="button" data-set-lang="en">EN</button>
     </div>
   </header>
 
-  <main id="top">
-    <!-- Profile card -->
-    <section class="wrap profile-section">
-      <div class="profile-card">
-        <div class="profile-main">
-          <img class="avatar" src="assets/profile.jpg" alt="Gombo Khongor" width="104" height="104">
-          <div>
-            <h1>Gombo Khongor</h1>
-            <p class="role">
-              <span lang="ja">AIエンジニア志望 ・ 電気通信大学 大学院 修士1年（2028年3月修了予定）</span>
-              <span lang="en">Aspiring AI engineer · M1 master's student, The University of Electro-Communications (graduating March 2028)</span>
-            </p>
-            <p class="meta">
-              <span lang="ja">東京 ・ モンゴル出身 ・ 日本語 JLPT N1 ・ 英語 TOEIC 875 / IELTS 6.5</span>
-              <span lang="en">Tokyo · from Mongolia · Japanese JLPT N1 · English TOEIC 875 / IELTS 6.5</span>
-            </p>
-          </div>
-        </div>
-        <p class="bio">
-          <span lang="ja">家族の店の業務システムから海外企業での長期インターンまで、使う人の声を聞きながら、要件定義からテスト・運用まで一人で作り切ることを大切にしています。電気通信大学の大学院では推薦システムを研究しています。</span>
-          <span lang="en">From my family's shop to a long-term internship with a company in the Netherlands, I build AI systems end to end — requirements, design, tests and operation — while listening to the people who use them. My graduate research at The University of Electro-Communications is on recommender systems.</span>
+  <main class="col" id="top">
+    <section class="intro">
+      <img class="portrait" src="assets/profile.jpg" alt="Gombo Khongor" width="120" height="150">
+      <div>
+        <p class="label">AI Engineer · <span lang="ja">28卒</span><span lang="en">Class of 2028</span></p>
+        <h1>
+          <span lang="ja">身近な人の仕事を、<br>AIで実際に変える。</span>
+          <span lang="en">AI that changes<br>real people's work.</span>
+        </h1>
+        <p class="lead">
+          <span lang="ja">電気通信大学 大学院 修士1年（2028年3月修了予定）。家族の店の業務システムから海外企業での長期インターンまで、使う人の声を聞きながら、要件定義からテスト・運用まで一人で作り切ります。</span>
+          <span lang="en">M1 master's student at The University of Electro-Communications, Tokyo (graduating March 2028). From my family's shop to a long-term internship in the Netherlands, I build AI systems end to end — requirements, tests and operation — while listening to the people who use them.</span>
         </p>
-        <div class="profile-links">
-          <a class="button" href="https://www.linkedin.com/in/khongor-gombo-8133b8221/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="button" href="https://github.com/Khongor1234" target="_blank" rel="noopener">GitHub</a>
-          <a class="button" href="https://www.youtube.com/@gombokhongor7639" target="_blank" rel="noopener">YouTube</a>
-        </div>
-        <div class="share">
-          <div id="qr" class="qr" role="img" aria-label="QR code for this page"></div>
-          <p class="share-text">
-            <span lang="ja">スキャンしてこのページを開く</span>
-            <span lang="en">Scan to open this page</span>
-          </p>
+        <div class="facts">
+          <span lang="ja">東京</span><span lang="en">Tokyo</span>
+          <span lang="ja">モンゴル出身</span><span lang="en">From Mongolia</span>
+          <span>JLPT N1</span>
+          <span>TOEIC 875 / IELTS 6.5</span>
         </div>
       </div>
+    </section>
 
-      <dl class="stats">
-        <div><dt>1h → 10min</dt><dd><span lang="ja">母の確認作業（レシートOCR）</span><span lang="en">Mom's daily checking (Receipt OCR)</span></dd></div>
-        <div><dt>93%</dt><dd><span lang="ja">10秒の声からの本人らしさ（Smile）</span><span lang="en">Voice likeness from 10 s (Smile)</span></dd></div>
-        <div><dt>~1,800</dt><dd><span lang="ja">自動テスト（TDDで開発）</span><span lang="en">Automated tests, written test-first</span></dd></div>
+    <section id="work">
+      <!-- 01 Receipt OCR -->
+      <article class="work">
+        <div class="work-head">
+          <span class="num">01</span>
+          <h2><span lang="ja">レシートOCRで在庫表を自動更新</span><span lang="en">Receipt OCR that updates the stock sheet by itself</span></h2>
+          <span class="role"><span lang="ja">個人開発 · 稼働中</span><span lang="en">Solo · in daily use</span></span>
+        </div>
+        <div class="frame" lang="ja"><iframe src="https://www.youtube-nocookie.com/embed/0_JQma7DpvA?rel=0" title="レシートOCRで在庫表を自動更新" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="frame" lang="en"><iframe src="https://www.youtube-nocookie.com/embed/kTh3PQnt9d8?rel=0" title="Receipt OCR That Updates the Stock Sheet by Itself" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="work-body">
+          <p>
+            <span lang="ja">家族の家電店（モンゴル）で、レシートをスマホで撮るだけで Gemini が品名・数量を読み取り、約580商品のマスタと照合。母が「正／誤」を選ぶと在庫表に記入され、各セルから元のレシートの行へたどれます。</span>
+            <span lang="en">In my family's electronics shop in Mongolia, staff photograph a receipt and Gemini reads product names and quantities, matching them against a ~580-product master list. My mother marks each line correct or wrong; it is written into the stock sheet, and every cell leads back to its receipt line.</span>
+          </p>
+          <div>
+            <ul class="ledger">
+              <li><span lang="ja">母の確認作業</span><span lang="en">Mom's daily checking</span><b>1h → 10min</b></li>
+              <li><span lang="ja">ずれたセル参照</span><span lang="en">Broken cell references</span><b>133 → 3</b></li>
+              <li><span lang="ja">進捗サイト応答</span><span lang="en">Progress site response</span><b>14s → 1.2s</b></li>
+              <li><span lang="ja">自動テスト（TDD）</span><span lang="en">Automated tests (TDD)</span><b>~1,800</b></li>
+            </ul>
+            <p class="stack">Gemini API · Google Apps Script · Sheets / Drive · Cloudflare Pages</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 Smile -->
+      <article class="work">
+        <div class="work-head">
+          <span class="num">02</span>
+          <h2><span lang="ja">Smile：非母語話者の声を本人に近く再現</span><span lang="en">Smile: recreating a non-native speaker's voice</span></h2>
+          <span class="role"><span lang="ja">長期インターン · SmartAvatar B.V.</span><span lang="en">Internship · SmartAvatar B.V.</span></span>
+        </div>
+        <div class="frame" lang="ja"><iframe src="https://www.youtube-nocookie.com/embed/JTQRukLN9Ko?rel=0" title="Smile：非母語話者の声を本人に近く再現" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="frame" lang="en"><iframe src="https://www.youtube-nocookie.com/embed/Ors9jO2gufY?rel=0" title="Smile: Recreating a Non-Native Speaker's Voice" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="work-body">
+          <p>
+            <span lang="ja">声のデジタルツインの第一段階。少しの録音から本人の声を複製し、その声でAIが会話するアプリと、天井（本人の別録音）と床（別人）を必ず測る評価の物差しを作りました。</span>
+            <span lang="en">The first step of a voice digital twin: an app that copies a person's voice from a short recording and lets an AI talk in it, plus a ruler that always measures against a ceiling (the person's other recordings) and a floor (other people).</span>
+          </p>
+          <div>
+            <ul class="ledger">
+              <li><span lang="ja">10秒の声からの本人らしさ</span><span lang="en">Likeness from 10 s of voice</span><b>93%</b></li>
+              <li><span lang="ja">LoRA 追加学習（天井比）</span><span lang="en">LoRA training (of ceiling)</span><b>90% → 95%</b></li>
+              <li><span lang="ja">比較した声のモデル</span><span lang="en">Voice models compared</span><b>7</b></li>
+              <li><span lang="ja">代償：文字誤り</span><span lang="en">Cost: letter errors</span><b>0.7% → 3.2%</b></li>
+            </ul>
+            <p class="stack">Chatterbox · LoRA (peft) · Whisper · ECAPA-TDNN · Google Cloud</p>
+          </div>
+        </div>
+        <p class="note"><span lang="ja">※ 93% は公開データ LJSpeech で、本人の別の録音を天井として測った値です。</span><span lang="en">The 93% is measured on the public LJSpeech data against the person's own other recordings.</span></p>
+      </article>
+
+      <!-- 03 Miracle Head -->
+      <article class="work">
+        <div class="work-head">
+          <span class="num">03</span>
+          <h2><span lang="ja">Miracle Head：5つの感情エージェントの相談AI</span><span lang="en">Miracle Head: counseling AI with five emotion agents</span></h2>
+          <span class="role"><span lang="ja">個人開発 · 試作</span><span lang="en">Solo · prototype</span></span>
+        </div>
+        <a class="frame demo" href="https://miracle-head.vercel.app" target="_blank" rel="noopener">
+          <span class="characters" aria-hidden="true"><img src="assets/joy.png" alt=""><img src="assets/sadness.png" alt=""><img src="assets/anger.png" alt=""><img src="assets/fear.png" alt=""><img src="assets/disgust.png" alt=""></span>
+          <span class="demo-label"><span lang="ja">デモを開く ↗</span><span lang="en">Open the demo ↗</span></span>
+        </a>
+        <div class="work-body">
+          <p>
+            <span lang="ja">ヨロコビ・カナシミ・イカリ・ビビリ・ムカムカが返答案を書き、互いの案を読んで修正し、相互採点で最良の1つを選びます。危機的な言葉には安全プロンプトで対応します。</span>
+            <span lang="en">Joy, Sadness, Anger, Fear and Disgust each draft a reply, revise it after reading the others, then score each other's drafts to pick one. Crisis wording switches to a safety prompt.</span>
+          </p>
+          <div>
+            <ul class="ledger">
+              <li><span lang="ja">エージェント</span><span lang="en">Agents</span><b>5</b></li>
+              <li><span lang="ja">検討ラウンド</span><span lang="en">Review rounds</span><b>2</b></li>
+            </ul>
+            <p class="stack">FastAPI · React · Gemini API · <a href="https://github.com/Khongor1234/miracle_head" target="_blank" rel="noopener">GitHub ↗</a></p>
+          </div>
+        </div>
+        <p class="note"><span lang="ja">※ 支援的なロールプレイの試作であり、臨床用ツールではありません。</span><span lang="en">A supportive role-play prototype, not a clinical tool.</span></p>
+      </article>
+    </section>
+
+    <section class="rows" id="about">
+      <span class="num">04</span>
+      <dl>
+        <dt><span lang="ja">長期インターン</span><span lang="en">Internship</span></dt>
+        <dd><span lang="ja">SmartAvatar B.V.（オランダ）— 音声クローン「Smile」と評価設計</span><span lang="en">SmartAvatar B.V. (Netherlands) — voice-clone app "Smile" and its evaluation</span></dd>
+        <dt><span lang="ja">業務システム開発</span><span lang="en">Business systems</span></dt>
+        <dd><span lang="ja">家族経営の家電店（モンゴル）— 在庫表とレシートOCR</span><span lang="en">Family electronics shop (Mongolia) — stock sheet and receipt OCR</span></dd>
+        <dt><span lang="ja">大学院</span><span lang="en">Education</span></dt>
+        <dd><span lang="ja">電気通信大学 大学院 修士1年（2028年3月修了予定）— 推薦システム研究</span><span lang="en">The University of Electro-Communications, M1 (graduating March 2028) — recommender systems</span></dd>
+        <dt><span lang="ja">AI・機械学習</span><span lang="en">AI / ML</span></dt>
+        <dd><span lang="ja">LLM API、マルチエージェント、音声合成・認識、LoRA 追加学習、評価設計</span><span lang="en">LLM APIs, multi-agent design, TTS and ASR, LoRA fine-tuning, evaluation design</span></dd>
+        <dt><span lang="ja">開発・インフラ</span><span lang="en">Engineering</span></dt>
+        <dd>Python, TypeScript, FastAPI, React, Google Apps Script, Vercel, Cloudflare, Supabase, TDD</dd>
+        <dt><span lang="ja">言語</span><span lang="en">Languages</span></dt>
+        <dd><span lang="ja">モンゴル語（母語）、日本語（JLPT N1）、英語（TOEIC 875 / IELTS 6.5）</span><span lang="en">Mongolian (native), Japanese (JLPT N1), English (TOEIC 875 / IELTS 6.5)</span></dd>
       </dl>
     </section>
 
-    <section id="projects" class="wrap section">
-      <h2><span lang="ja">プロジェクト</span><span lang="en">Projects</span></h2>
-
-      <!-- Receipt OCR -->
-      <article class="project">
-        <div class="media">
-          <div class="video" lang="ja"><iframe src="https://www.youtube-nocookie.com/embed/0_JQma7DpvA?rel=0" title="レシートOCRで在庫表を自動更新" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-          <div class="video" lang="en"><iframe src="https://www.youtube-nocookie.com/embed/kTh3PQnt9d8?rel=0" title="Receipt OCR That Updates the Stock Sheet by Itself" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        </div>
-        <div class="body">
-          <p class="tag"><span lang="ja">個人開発 ・ 家族の家電店（モンゴル）で稼働中</span><span lang="en">Solo · running in my family's electronics shop (Mongolia)</span></p>
-          <h3><span lang="ja">レシートOCRで在庫表を自動更新</span><span lang="en">Receipt OCR that updates the stock sheet by itself</span></h3>
-          <p class="headline"><span lang="ja">普段1時間かかっていた母の確認作業が、<strong>約10分</strong>に。</span><span lang="en">My mother's checking, an hour on a normal day, now takes <strong>about ten minutes</strong>.</span></p>
-          <p>
-            <span lang="ja">スタッフがレシートや伝票をスマートフォンで撮影するだけで、Gemini が品名・数量を読み取り、約580商品のマスタと照合。母が日ごとの確認シートで「正／誤」を選ぶと、在庫表（Google スプレッドシート）に自動で記入され、セルのメモから元のレシートの行へたどれます。</span>
-            <span lang="en">Staff photograph a receipt or slip with a phone; Gemini reads product names and quantities and matches them against a master list of ~580 products. My mother marks each line correct or wrong in a daily review sheet, and it is written into the stock sheet (Google Sheets), with a note on every cell that leads back to the receipt line.</span>
-          </p>
-          <ul class="points">
-            <li><span lang="ja">追加された行でずれたセル参照を、月ごとの行順ハッシュで自動修復：<strong>133件 → 3件</strong></span><span lang="en">Cell references broken by added rows repair themselves via a per-month row-order hash: <strong>133 → 3</strong></span></li>
-            <li><span lang="ja">Apps Script の6分制限に合わせて処理を区切り、1分後に自動再開</span><span lang="en">Work is cut to fit Apps Script's six-minute limit and resumes a minute later</span></li>
-            <li><span lang="ja">進捗サイトはデータを圧縮保存し、応答 <strong>14秒 → 1.2秒</strong></span><span lang="en">Progress site serves pre-compressed data: <strong>14 s → 1.2 s</strong></span></li>
-            <li><span lang="ja">テストを先に書くTDD、<strong>自動テスト約1,800件</strong>（OCR部分782件）、本番前の試運転モード</span><span lang="en">Test-first: <strong>~1,800 automated tests</strong> (782 for the OCR) and a dry-run mode before live sheets</span></li>
-          </ul>
-          <ul class="chips" aria-label="Tech">
-            <li>Gemini API</li><li>Google Apps Script</li><li>Google Sheets / Drive</li><li>Cloudflare Pages</li><li>GitHub Actions</li><li>Node.js · pytest</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- Smile -->
-      <article class="project">
-        <div class="media">
-          <div class="video" lang="ja"><iframe src="https://www.youtube-nocookie.com/embed/JTQRukLN9Ko?rel=0" title="Smile：非母語話者の声を本人に近く再現" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-          <div class="video" lang="en"><iframe src="https://www.youtube-nocookie.com/embed/Ors9jO2gufY?rel=0" title="Smile: Recreating a Non-Native Speaker's Voice" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        </div>
-        <div class="body">
-          <p class="tag"><span lang="ja">長期インターン ・ SmartAvatar B.V.（オランダ）</span><span lang="en">Long-term internship · SmartAvatar B.V. (Netherlands)</span></p>
-          <h3><span lang="ja">Smile：非母語話者の声を、本人に近く再現</span><span lang="en">Smile: recreating a non-native speaker's voice</span></h3>
-          <p class="headline"><span lang="ja">わずか10秒の声から、<strong>本人らしさ93%</strong>。LoRA の追加学習で天井比 90% → 95%。</span><span lang="en">From ten seconds of a voice: <strong>93% of the real person</strong>. With LoRA training, 90% → 95% of the ceiling.</span></p>
-          <p>
-            <span lang="ja">「声のデジタルツイン」の最初の段階として、少しの録音から本人の声を複製し、その声でAIが会話するWebアプリと、その評価の仕組みを作りました。週に平均2回のミーティングでチームの意見を聞き、改善を重ねました。</span>
-            <span lang="en">As the first step of a "voice digital twin", I built a web app that copies a person's voice from a short recording and lets an AI talk in it, plus the way to measure how close the copy is — improved through about two team meetings a week.</span>
-          </p>
-          <ul class="points">
-            <li><span lang="ja">話者認識AI（ECAPA-TDNN）で、本人の別録音（天井）と別人（床）を必ず一緒に測る物差しを設計</span><span lang="en">Designed the ruler: speaker-recognition similarity (ECAPA-TDNN), always measured with a ceiling (the person's other recordings) and a floor (other people)</span></li>
-            <li><span lang="ja">7つの声のモデルを比較し、Chatterbox（93%）を選定。OpenVoice v2 は47%</span><span lang="en">Compared seven voice models; chose Chatterbox (93%) over OpenVoice v2 (47%)</span></li>
-            <li><span lang="ja">モデルの約4%（22.6M／555M）だけを MacBook Air で学習し、統合（merge）で元の速度を維持</span><span lang="en">Trained ~4% of the weights (22.6M of 555M) on a MacBook Air, then merged them to keep the original speed</span></li>
-            <li><span lang="ja">限界も正直に：追加学習で文字誤りが 0.7% → 3.2% に増加</span><span lang="en">Honest about limits: training raised letter errors from 0.7% to 3.2%</span></li>
-          </ul>
-          <p class="note"><span lang="ja">※ 93% は公開データ LJSpeech で、本人の別の録音を天井として測った値です。</span><span lang="en">The 93% is measured on the public LJSpeech data against the person's own other recordings.</span></p>
-          <ul class="chips" aria-label="Tech">
-            <li>Chatterbox</li><li>LoRA (peft)</li><li>Whisper</li><li>Gemini API</li><li>emotion2vec+</li><li>SpeechBrain ECAPA-TDNN</li><li>Google Cloud (L4)</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- Miracle Head -->
-      <article class="project">
-        <div class="media">
-          <a class="demo-card" href="https://miracle-head.vercel.app" target="_blank" rel="noopener">
-            <span class="demo-faces" aria-hidden="true">
-              <img src="assets/joy.png" alt=""><img src="assets/sadness.png" alt=""><img src="assets/anger.png" alt=""><img src="assets/fear.png" alt=""><img src="assets/disgust.png" alt="">
-            </span>
-            <span class="demo-label"><span lang="ja">デモを開く ↗</span><span lang="en">Open the demo ↗</span></span>
-          </a>
-        </div>
-        <div class="body">
-          <p class="tag"><span lang="ja">個人開発 ・ プロトタイプ</span><span lang="en">Solo · prototype</span></p>
-          <h3><span lang="ja">Miracle Head：5つの感情エージェントによる相談AI</span><span lang="en">Miracle Head: counseling AI with five emotion agents</span></h3>
-          <p class="headline"><span lang="ja">1つの視点ではなく、<strong>5つのエージェントの合議</strong>で返答を選ぶ。</span><span lang="en">The reply is chosen by <strong>five agents deliberating</strong>, not one point of view.</span></p>
-          <p>
-            <span lang="ja">映画『インサイド・ヘッド』から着想し、ヨロコビ・カナシミ・イカリ・ビビリ・ムカムカの5エージェントがそれぞれ返答案を書き、互いの案を読んで修正し、相互採点で最良の1つを選びます。検討の過程はストリーミングでリアルタイムに表示されます。</span>
-            <span lang="en">Inspired by the film Inside Out: Joy, Sadness, Anger, Fear and Disgust each draft a reply, revise it after reading the others, then score each other's drafts to pick one. The deliberation streams to the screen live.</span>
-          </p>
-          <ul class="points">
-            <li><span lang="ja">「死にたい」等の言葉で危機対応のプロンプトに切り替える安全設計</span><span lang="en">Crisis wording switches to a safety prompt that asks about danger and points to support</span></li>
-            <li><span lang="ja">非同期で5エージェントを並列実行し、NDJSON でイベントを配信</span><span lang="en">Agents run in parallel (asyncio); events stream as NDJSON</span></li>
-            <li><span lang="ja">クラウド化に向けて Vercel + Supabase 構成とパスワード保護を実装</span><span lang="en">Moving to the cloud with Vercel + Supabase and a password guard</span></li>
-          </ul>
-          <p class="note"><span lang="ja">※ 支援的なロールプレイの試作であり、臨床用ツールではありません。</span><span lang="en">A supportive role-play prototype, not a clinical tool.</span></p>
-          <ul class="chips" aria-label="Tech">
-            <li>FastAPI</li><li>React (Vite)</li><li>Gemini API</li><li>ElevenLabs</li><li>Vercel</li><li>Supabase</li>
-          </ul>
-          <p class="links"><a href="https://github.com/Khongor1234/miracle_head" target="_blank" rel="noopener">GitHub ↗</a></p>
-        </div>
-      </article>
-    </section>
-
-    <section id="experience" class="wrap section">
-      <h2><span lang="ja">経歴</span><span lang="en">Experience &amp; Education</span></h2>
-      <ol class="timeline">
-        <li>
-          <h3><span lang="ja">長期インターン（AI・音声）</span><span lang="en">Long-term intern (AI / voice)</span></h3>
-          <p class="where">SmartAvatar B.V. <span lang="ja">（オランダ・リモート）</span><span lang="en">(Netherlands, remote)</span></p>
-          <p><span lang="ja">声のデジタルツインの第一段階として、音声クローンアプリ「Smile」と評価の仕組みを担当。</span><span lang="en">Built the voice-clone app "Smile" and its evaluation, the first step of a voice digital twin.</span></p>
-        </li>
-        <li>
-          <h3><span lang="ja">業務システム開発（家業）</span><span lang="en">Business systems developer (family business)</span></h3>
-          <p class="where"><span lang="ja">家族経営の家電店（モンゴル）</span><span lang="en">Family electronics shop (Mongolia)</span></p>
-          <p><span lang="ja">紙の伝票をスプレッドシートの在庫表に置き換え、レシートOCRで記入と確認を自動化。</span><span lang="en">Replaced paper slips with a spreadsheet stock system, then automated entry and checking with receipt OCR.</span></p>
-        </li>
-        <li>
-          <h3><span lang="ja">修士課程 1年（2028年3月修了予定）</span><span lang="en">Master's program, year 1 (graduating March 2028)</span></h3>
-          <p class="where"><span lang="ja">電気通信大学 大学院（東京都調布市）</span><span lang="en">The University of Electro-Communications, Graduate School (Chofu, Tokyo)</span></p>
-          <p><span lang="ja">研究テーマ：推薦システム</span><span lang="en">Research: recommender systems</span></p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="skills" class="wrap section">
-      <h2><span lang="ja">スキル</span><span lang="en">Skills</span></h2>
-      <div class="skill-grid">
-        <div class="skill">
-          <h3><span lang="ja">AI・機械学習</span><span lang="en">AI / ML</span></h3>
-          <p><span lang="ja">LLM API（Gemini）、マルチエージェント設計、音声合成・音声認識（Chatterbox, Whisper）、LoRA 追加学習、評価設計、推薦システム（研究）</span><span lang="en">LLM APIs (Gemini), multi-agent design, TTS and ASR (Chatterbox, Whisper), LoRA fine-tuning, evaluation design, recommender systems (research)</span></p>
-        </div>
-        <div class="skill">
-          <h3><span lang="ja">開発</span><span lang="en">Engineering</span></h3>
-          <p><span lang="ja">Python、JavaScript / TypeScript、FastAPI、React、Google Apps Script、TDD（pytest, Node.js）</span><span lang="en">Python, JavaScript / TypeScript, FastAPI, React, Google Apps Script, TDD (pytest, Node.js)</span></p>
-        </div>
-        <div class="skill">
-          <h3><span lang="ja">インフラ</span><span lang="en">Cloud</span></h3>
-          <p>Cloudflare Pages / Workers, Vercel, Supabase, Google Cloud, GitHub Actions</p>
-        </div>
-        <div class="skill">
-          <h3><span lang="ja">言語</span><span lang="en">Languages</span></h3>
-          <p><span lang="ja">モンゴル語（母語）、日本語（JLPT N1）、英語（TOEIC 875、IELTS 6.5）</span><span lang="en">Mongolian (native), Japanese (JLPT N1), English (TOEIC 875, IELTS 6.5)</span></p>
+    <footer class="contact" id="contact">
+      <span class="num">05</span>
+      <div>
+        <p class="contact-line"><span lang="ja">ご覧いただきありがとうございます。</span><span lang="en">Thank you for visiting.</span></p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/khongor-gombo-8133b8221/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Khongor1234" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.youtube.com/@gombokhongor7639" target="_blank" rel="noopener">YouTube</a>
         </div>
       </div>
-    </section>
+      <figure class="share">
+        <div id="qr" class="qr" role="img" aria-label="QR code for this page"></div>
+        <figcaption><span lang="ja">スキャンして開く</span><span lang="en">Scan to open</span></figcaption>
+      </figure>
+    </footer>
   </main>
 
-  <footer class="wrap footer">© 2026 Gombo Khongor</footer>
+  <p class="colophon col">© 2026 Gombo Khongor</p>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" defer></script>
   <script src="main.js" defer></script>
