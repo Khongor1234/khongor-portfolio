@@ -73,26 +73,27 @@
       <article class="work">
         <div class="work-head">
           <span class="num">01</span>
-          <h2><span lang="ja">レシートOCRで在庫表を自動更新</span><span lang="en">Receipt OCR that updates the stock sheet by itself</span></h2>
+          <h2><span lang="ja">母が毎日使う在庫管理Webアプリ（レシートOCR付き）</span><span lang="en">A stock web app my mother uses every day, with receipt OCR built in</span></h2>
           <span class="role"><span lang="ja">個人開発 · 稼働中</span><span lang="en">Solo · in daily use</span></span>
         </div>
         <div class="frame" lang="ja"><iframe src="https://www.youtube-nocookie.com/embed/0_JQma7DpvA?rel=0" title="レシートOCRで在庫表を自動更新" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <div class="frame" lang="en"><iframe src="https://www.youtube-nocookie.com/embed/kTh3PQnt9d8?rel=0" title="Receipt OCR That Updates the Stock Sheet by Itself" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="frame" lang="en"><iframe src="https://www.youtube-nocookie.com/embed/BJmDp-TqitU?rel=0" title="$0/month: Mom's Stock Check 1 Hour to 10 Minutes - Family Shop Web App (Portfolio v2)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         <div class="work-body">
           <p>
-            <span lang="ja">家族の家電店（モンゴル）で、レシートをスマホで撮るだけで Gemini が品名・数量を読み取り、約580商品のマスタと照合。母が「正／誤」を選ぶと在庫表に記入され、各セルから元のレシートの行へたどれます。</span>
-            <span lang="en">In my family's electronics shop in Mongolia, staff photograph a receipt and Gemini reads product names and quantities, matching them against a ~580-product master list. My mother marks each line correct or wrong; it is written into the stock sheet, and every cell leads back to its receipt line.</span>
+            <span lang="ja">家族の家電店（モンゴル）の在庫表（Google スプレッドシート＋Apps Script）を、スマホでもパソコンでも使えるWebアプリに作り直しました。スタッフがレシートを撮ると Gemini が行を読み取り、母が「正しい／関係なし」を選ぶと、母のスプレッドシートそっくりの在庫表に記入されます。表の色は操作できます。緑のセルを開くと元のレシート、チェック1つで表に反映。母は今、これなしでは作業したがりません。</span>
+            <span lang="en">I rebuilt my family's appliance-shop stock books (Google Sheets + Apps Script, Mongolia) as a web app that works on a phone and a computer. Staff photograph a slip, Gemini reads its lines, and my mother ticks correct or not relevant; the number goes into a stock book that looks like her spreadsheet. Its colours are live: a green cell opens its receipt, and one tick writes into the book. She now prefers not to work without it.</span>
           </p>
           <div>
             <ul class="ledger">
               <li><span lang="ja">母の確認作業</span><span lang="en">Mom's daily checking</span><b>1h → 10min</b></li>
-              <li><span lang="ja">ずれたセル参照</span><span lang="en">Broken cell references</span><b>133 → 3</b></li>
-              <li><span lang="ja">進捗サイト応答</span><span lang="en">Progress site response</span><b>14s → 1.2s</b></li>
-              <li><span lang="ja">自動テスト（TDD）</span><span lang="en">Automated tests (TDD)</span><b>~1,800</b></li>
+              <li><span lang="ja">結果が出るまで（1セル、ローカル計測）</span><span lang="en">Time to a result (one cell, local)</span><b>~10min → 41ms</b></li>
+              <li><span lang="ja">元の表と一致した残高</span><span lang="en">Balances matching the original sheet</span><b>12,944</b></li>
+              <li><span lang="ja">自動テスト</span><span lang="en">Automated tests</span><b>1,600+</b></li>
             </ul>
-            <p class="stack">Gemini API · Google Apps Script · Sheets / Drive · Cloudflare Pages</p>
+            <p class="stack">React · TypeScript · Supabase (PostgreSQL, RLS, Realtime) · Gemini API · Cloudflare Workers + Access · Claude Code</p>
           </div>
         </div>
+        <p class="note"><span lang="ja">※ セキュリティ：二重の鍵（Cloudflare Access と、全テーブルに行レベルセキュリティを掛けたデータベース側の許可リスト）。ブラウザには公開キーのみ、AIキーはサーバー側の秘密。第三者が読み書きできないことをデータベーステストで確認しています。</span><span lang="en">Security: two locks (Cloudflare Access, then a database allowlist with row-level security on every table). The browser holds only a publishable key and the AI key stays a server-side secret. Database tests prove a stranger can read and write nothing.</span></p>
       </article>
 
       <!-- 02 Smile -->
@@ -156,7 +157,7 @@
         <dt><span lang="ja">長期インターン</span><span lang="en">Internship</span></dt>
         <dd><span lang="ja">SmartAvatar B.V.（オランダ）— 音声クローン「Smile」と評価設計</span><span lang="en">SmartAvatar B.V. (Netherlands) — voice-clone app "Smile" and its evaluation</span></dd>
         <dt><span lang="ja">業務システム開発</span><span lang="en">Business systems</span></dt>
-        <dd><span lang="ja">家族経営の家電店（モンゴル）— 在庫表とレシートOCR</span><span lang="en">Family electronics shop (Mongolia) — stock sheet and receipt OCR</span></dd>
+        <dd><span lang="ja">家族経営の家電店（モンゴル）— 在庫管理Webアプリとレシート OCR</span><span lang="en">Family appliance shop (Mongolia) — stock web app and receipt OCR</span></dd>
         <dt><span lang="ja">大学院</span><span lang="en">Education</span></dt>
         <dd><span lang="ja">電気通信大学 大学院 修士1年（2028年3月修了予定）— 推薦システム研究</span><span lang="en">The University of Electro-Communications, M1 (graduating March 2028) — recommender systems</span></dd>
         <dt><span lang="ja">AI・機械学習</span><span lang="en">AI / ML</span></dt>
