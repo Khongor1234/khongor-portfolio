@@ -82,7 +82,7 @@ html[data-lang="en"] .work h2 { font-family: var(--latin); font-weight: 400; let
 .frame iframe { width: 100%; height: 100%; border: 0; display: block; }
 .demo { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; text-decoration: none; }
 .characters { display: flex; gap: 28px; }
-.characters img { width: 72px; height: 72px; object-fit: contain; }
+.characters img { width: auto; height: 96px; object-fit: contain; }
 .demo-label { font-size: 12px; letter-spacing: 0.2em; color: var(--muted); }
 .demo:hover .demo-label { color: var(--ink); }
 
@@ -128,7 +128,7 @@ html[data-lang="en"] .work h2 { font-family: var(--latin); font-weight: 400; let
   .work-body { grid-template-columns: 1fr; gap: 24px; margin-left: 0; }
   .note { margin-left: 0; }
   .characters { gap: 10px; }
-  .characters img { width: 44px; height: 44px; }
+  .characters img { width: auto; height: 60px; }
   .rows dl { grid-template-columns: 1fr; }
   .rows dt { border-bottom: 0; padding-bottom: 0; }
   .share { align-items: flex-start; }
