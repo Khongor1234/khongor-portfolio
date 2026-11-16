@@ -46,6 +46,49 @@
     </div>
   </header>
 
+  <!-- Scroll film (generated with Higgsfield): the page's scroll plays it forward and back. -->
+  <section class="film" id="film" data-film aria-label="Introduction film">
+    <div class="film-stage">
+      <picture>
+        <source media="(max-width: 760px)" srcset="assets/film/film-mobile-poster.jpg">
+        <img class="film-poster" src="assets/film/film-poster.jpg" alt="" width="1920" height="1080" fetchpriority="high">
+      </picture>
+      <video class="film-video" muted playsinline preload="none" aria-hidden="true" data-src="assets/film/film.mp4" data-mobile-src="assets/film/film-mobile.mp4"></video>
+      <div class="film-progress" aria-hidden="true"><span></span></div>
+    </div>
+    <div class="film-story">
+      <div class="film-chapter">
+        <div class="film-copy">
+          <p class="film-kicker">Gombo Khongor · AI Engineer · <span lang="ja">28卒</span><span lang="en">Class of 2028</span></p>
+          <p class="film-title"><span lang="ja">一枚のレシートから、<br>動くAIへ。</span><span lang="en">From a shop slip<br>to AI that works.</span></p>
+          <p class="film-body"><span lang="ja">スクロールすると、3つのプロジェクトをたどります。</span><span lang="en">Scroll to follow three projects.</span></p>
+          <span class="film-cue" aria-hidden="true"><i></i></span>
+        </div>
+      </div>
+      <div class="film-chapter">
+        <div class="film-copy">
+          <p class="film-kicker">01 · <span lang="ja">個人開発 · 稼働中</span><span lang="en">Solo · in daily use</span></p>
+          <p class="film-title"><span lang="ja">母の確認作業、<br>1時間から10分へ。</span><span lang="en">Mom's checking:<br>1 hour to 10 minutes.</span></p>
+          <a class="film-more" href="#work-stock"><span lang="ja">詳しく見る</span><span lang="en">See the stock app</span> <i aria-hidden="true">↓</i></a>
+        </div>
+      </div>
+      <div class="film-chapter">
+        <div class="film-copy">
+          <p class="film-kicker">02 · <span lang="ja">長期インターン · SmartAvatar B.V.</span><span lang="en">Internship · SmartAvatar B.V.</span></p>
+          <p class="film-title"><span lang="ja">10秒の声から、<br>本人の声を。</span><span lang="en">A voice copied<br>from 10 seconds.</span></p>
+          <a class="film-more" href="#work-smile"><span lang="ja">詳しく見る</span><span lang="en">See Smile</span> <i aria-hidden="true">↓</i></a>
+        </div>
+      </div>
+      <div class="film-chapter">
+        <div class="film-copy">
+          <p class="film-kicker">03 · <span lang="ja">個人開発 · 試作</span><span lang="en">Solo · prototype</span></p>
+          <p class="film-title"><span lang="ja">5つの感情が、<br>ひとつの返事を選ぶ。</span><span lang="en">Five emotions,<br>one kind reply.</span></p>
+          <a class="film-more" href="#work-miracle"><span lang="ja">詳しく見る</span><span lang="en">See Miracle Head</span> <i aria-hidden="true">↓</i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main class="col" id="top">
     <section class="intro">
       <img class="portrait" src="assets/profile.jpg" alt="Gombo Khongor" width="120" height="150">
@@ -70,7 +113,7 @@
 
     <section id="work">
       <!-- 01 Receipt OCR -->
-      <article class="work">
+      <article class="work" id="work-stock">
         <div class="work-head">
           <span class="num">01</span>
           <h2><span lang="ja">母が毎日使う在庫管理Webアプリ（レシートOCR付き）</span><span lang="en">A stock web app my mother uses every day, with receipt OCR built in</span></h2>
@@ -97,7 +140,7 @@
       </article>
 
       <!-- 02 Smile -->
-      <article class="work">
+      <article class="work" id="work-smile">
         <div class="work-head">
           <span class="num">02</span>
           <h2><span lang="ja">Smile：非母語話者の声を本人に近く再現</span><span lang="en">Smile: recreating a non-native speaker's voice</span></h2>
@@ -124,7 +167,7 @@
       </article>
 
       <!-- 03 Miracle Head -->
-      <article class="work">
+      <article class="work" id="work-miracle">
         <div class="work-head">
           <span class="num">03</span>
           <h2><span lang="ja">Miracle Head：5つの感情エージェントの相談AI</span><span lang="en">Miracle Head: counseling AI with five emotion agents</span></h2>

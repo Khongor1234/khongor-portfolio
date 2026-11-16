@@ -133,3 +133,106 @@ html[data-lang="en"] .work h2 { font-family: var(--latin); font-weight: 400; let
   .rows dt { border-bottom: 0; padding-bottom: 0; }
   .share { align-items: flex-start; }
 }
+
+/*
+  Scroll film (2026-11-16). One Higgsfield take: a shop slip lifts into threads that weave a sphere,
+  a voice wave passes through it, five agent glints settle. Scroll plays it forward and back.
+  The room is the ink with the lights off: indigo #0e1430, paper type, a jade accent for the voice wave.
+*/
+.film {
+  --film-bg: #0e1430;
+  --film-ink: #f1eee6;
+  --film-muted: #aeb3c7;
+  --film-accent: #6fb7a0;
+  --film-progress: 0;
+  position: relative;
+  background: var(--film-bg);
+  color: var(--film-ink);
+}
+.film-stage { position: sticky; top: 0; height: 100vh; height: 100dvh; overflow: hidden; }
+.film-poster, .film-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.film-video { opacity: 0; transition: opacity 0.4s; }
+.film.is-ready .film-video { opacity: 1; }
+.film-progress { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: rgba(241, 238, 230, 0.14); }
+.film-progress span { display: block; height: 100%; background: var(--film-accent); transform: scaleX(var(--film-progress)); transform-origin: left; }
+
+.film-story { position: relative; z-index: 1; margin-top: -100vh; margin-top: -100dvh; }
+.film-chapter { min-height: 150vh; }
+.film-chapter:first-child { min-height: 125vh; }
+.film-copy {
+  position: sticky; top: 0; min-height: 100vh; min-height: 100dvh;
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+  width: min(44rem, 100%); padding: 6rem clamp(16px, 6vw, 96px);
+}
+.film-chapter:nth-child(even) .film-copy { margin-left: auto; }
+.film-copy > * { position: relative; }
+.film-copy::before {
+  content: ""; position: absolute; inset: 15% -15% 15% -15%; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(14, 20, 48, 0.8) 0%, rgba(14, 20, 48, 0.45) 55%, transparent 100%);
+}
+.film-kicker { margin: 0 0 18px; font-size: 12px; letter-spacing: 0.2em; color: var(--film-accent); text-transform: uppercase; }
+.film-title {
+  margin: 0; font-family: var(--ja); font-weight: 500; font-size: clamp(28px, 3.8vw, 54px);
+  line-height: 1.35; letter-spacing: 0.04em; text-wrap: balance;
+}
+html[data-lang="en"] .film-title { font-family: var(--latin); font-weight: 300; font-size: clamp(36px, 5.6vw, 86px); line-height: 1.04; letter-spacing: -0.03em; }
+.film-body { margin: 24px 0 0; color: var(--film-muted); }
+.film-more {
+  margin-top: 28px; display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px;
+  border: 1px solid rgba(241, 238, 230, 0.3); border-radius: 999px; text-decoration: none;
+  font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+.film-more i { font-style: normal; display: inline-block; transition: transform 0.4s cubic-bezier(0.3, 1.6, 0.5, 1); }
+.film-more:hover { background: var(--film-ink); color: var(--film-bg); border-color: var(--film-ink); }
+.film-more:hover i { transform: translateY(3px); }
+.film-cue { margin-top: 40px; display: block; width: 1px; height: 48px; background: rgba(241, 238, 230, 0.2); overflow: hidden; }
+.film-cue i { display: block; width: 100%; height: 100%; background: var(--film-accent); }
+
+/* The header sits over the film. */
+.site-header { position: absolute; top: 0; left: 0; right: 0; z-index: 5; color: #f1eee6; }
+.site-header .nav a, .site-header .lang-switch button { color: #aeb3c7; }
+.site-header .nav a:hover, .site-header .lang-switch button:hover,
+html[data-lang="ja"] .site-header [data-set-lang="ja"],
+html[data-lang="en"] .site-header [data-set-lang="en"] { color: #f1eee6; }
+
+/* Paper sections: hover life and scroll-linked rise (transform only, nothing hidden). */
+.frame { transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.6s; }
+.work:hover .frame { transform: translateY(-4px); box-shadow: 0 24px 48px -28px rgba(28, 30, 36, 0.45); }
+.characters img { transition: transform 0.4s cubic-bezier(0.3, 1.6, 0.5, 1); }
+.demo:hover .characters img:hover { transform: translateY(-12px) scale(1.15) rotate(-5deg); }
+.links a { text-decoration: none; background: linear-gradient(currentColor, currentColor) left bottom / 0 1px no-repeat; transition: background-size 0.4s; }
+.links a:hover { background-size: 100% 1px; }
+.portrait { transition: transform 0.6s cubic-bezier(0.3, 1.6, 0.5, 1); }
+.portrait:hover { transform: rotate(-2deg) scale(1.03); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .film-chapter:first-child .film-copy > * { animation: film-rise 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .film-chapter:first-child .film-copy > :nth-child(2) { animation-delay: 0.12s; }
+  .film-chapter:first-child .film-copy > :nth-child(3) { animation-delay: 0.24s; }
+  .film-cue i { animation: film-cue 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) infinite; }
+  .characters img { animation: char-bob 3.4s ease-in-out infinite; }
+  .characters img:nth-child(2) { animation-delay: -0.7s; }
+  .characters img:nth-child(3) { animation-delay: -1.4s; }
+  .characters img:nth-child(4) { animation-delay: -2.1s; }
+  .characters img:nth-child(5) { animation-delay: -2.8s; }
+  .demo:hover .characters img:hover { animation-play-state: paused; }
+  @supports (animation-timeline: view()) {
+    .work, .rows, .contact { animation: paper-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 60%; }
+    .ledger li::after { animation: leader-draw linear both; animation-timeline: view(); animation-range: entry 10% cover 35%; }
+  }
+}
+@keyframes film-rise { from { transform: translateY(28px); } to { transform: none; } }
+@keyframes film-cue { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
+@keyframes char-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+@keyframes paper-rise { from { transform: translateY(48px); } to { transform: none; } }
+@keyframes leader-draw { from { transform: translateY(-4px) scaleX(0); } to { transform: translateY(-4px) scaleX(1); } }
+.ledger li::after { transform-origin: left; }
+
+@media (max-width: 760px) {
+  .film-chapter { min-height: 130vh; }
+  .film-copy, .film-chapter:nth-child(even) .film-copy {
+    margin-left: 0; justify-content: flex-end; padding: 6rem 16px calc(3.5rem + env(safe-area-inset-bottom));
+  }
+  .film-copy::before { inset: 30% -16px 0 -16px; background: linear-gradient(to top, transparent 0%, rgba(14, 20, 48, 0.88) 16%, rgba(14, 20, 48, 0.6) 62%, transparent 100%); }
+}
