@@ -303,3 +303,12 @@ html[data-lang="en"] .site-header [data-set-lang="en"] { color: #f1eee6; }
   .status { margin-left: 0; padding: 18px; }
   .status-body { grid-template-columns: 1fr; gap: 18px; }
 }
+
+/* Home-screen app: the page draws under the status bar, so the header,
+   anchor jumps and the last line leave room for it. Insets are 0 in a browser tab. */
+html { scroll-padding-top: calc(24px + env(safe-area-inset-top)); }
+.site-header { padding-top: calc(28px + env(safe-area-inset-top)); }
+.colophon { padding-bottom: calc(48px + env(safe-area-inset-bottom)); }
+@media (max-width: 760px) {
+  .site-header { padding-top: calc(20px + env(safe-area-inset-top)); }
+}

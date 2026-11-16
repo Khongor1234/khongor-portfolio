@@ -2,17 +2,26 @@
 <html lang="ja" data-lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Smile demo · Gombo Khongor</title>
   <meta name="description" content="Listen to a voice copied from 10 seconds: seven voice models, one ruler with a ceiling and a floor. Public-domain LJSpeech voice, pre-rendered audio.">
   <meta property="og:title" content="Smile demo · a voice copied from 10 seconds">
   <meta property="og:description" content="Seven voice models on one public-domain voice, measured against a ceiling and a floor.">
   <meta property="og:image" content="https://khongor-portfolio.vercel.app/assets/film/og.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230e1430'/%3E%3Cpath d='M14 32h6l4-10 6 22 6-26 5 20 4-6h5' fill='none' stroke='%236fb7a0' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Khongor">
+  <meta name="theme-color" content="#0e1430">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="/app-shell.css">
+  <script src="/app-shell.js"></script>
   <script>
     // Same language choice as the portfolio: ?lang= > saved choice > browser language.
     (function () {
@@ -30,7 +39,7 @@
 </head>
 <body>
   <header class="bar">
-    <a class="back" href="/#work-smile"><span aria-hidden="true">←</span> <span lang="ja">ポートフォリオ</span><span lang="en">Portfolio</span></a>
+    <a class="back" href="/#work-smile" data-app-back><span aria-hidden="true">←</span> <span lang="ja">ポートフォリオ</span><span lang="en">Portfolio</span></a>
     <span class="brand">Smile</span>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-set-lang="ja">日本語</button>
@@ -80,7 +89,7 @@
 
     <footer class="foot">
       <p><span lang="ja">このページは録音済みの音声を再生するだけで、サーバーもAIキーも使いません。実際のアプリは、誰かの声を録音する前に必ず本人の同意を取ります。</span><span lang="en">This page only plays pre-rendered audio: no server and no AI key. The real app asks for the speaker's consent before it records anyone.</span></p>
-      <p><a href="/#work-smile"><span lang="ja">← ポートフォリオに戻る</span><span lang="en">← Back to the portfolio</span></a></p>
+      <p><a href="/#work-smile" data-app-back><span lang="ja">← ポートフォリオに戻る</span><span lang="en">← Back to the portfolio</span></a></p>
     </footer>
   </main>
 

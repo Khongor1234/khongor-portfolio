@@ -3,7 +3,7 @@
   "short_name": "Khongor",
   "start_url": "/",
   "scope": "/",
-  "display": "minimal-ui",
+  "display": "standalone",
   "background_color": "#0e1430",
   "theme_color": "#0e1430",
   "icons": [

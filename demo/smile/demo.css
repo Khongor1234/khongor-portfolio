@@ -135,3 +135,7 @@ html[data-lang="ja"] h1 { font-weight: 500; font-size: clamp(26px, 4.4vw, 46px);
   .brand { display: none; }
   .lang { margin-left: auto; }
 }
+
+/* Home-screen app: the sticky bar reaches up under the status bar. */
+.bar { padding-top: calc(14px + env(safe-area-inset-top)); }
+.foot { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
