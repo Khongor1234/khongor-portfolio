@@ -257,3 +257,17 @@ html[data-lang="en"] .site-header [data-set-lang="en"] { color: #f1eee6; }
 }
 @keyframes try-wave { 0%, 100% { transform: scaleY(0.4); } 50% { transform: scaleY(1); } }
 @media (max-width: 760px) { .try-demo { margin: -12px 0 28px; } }
+
+/* Miracle Head stage: the app's own dreamscape behind its five characters. */
+.demo {
+  position: relative; overflow: hidden; justify-content: flex-end; padding-bottom: 9%;
+  background: #d9cdf2 url("assets/characters/backdrop.webp") center / cover no-repeat;
+}
+.demo .characters { gap: clamp(8px, 3vw, 40px); }
+.demo .characters img { height: clamp(64px, 11vw, 140px); filter: drop-shadow(0 10px 14px rgba(80, 50, 140, 0.25)); }
+.demo .demo-label {
+  padding: 8px 18px; border-radius: 999px; background: rgba(255, 255, 255, 0.78); color: #3b2d63;
+  backdrop-filter: blur(6px); transition: background 0.3s, transform 0.4s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+.demo:hover .demo-label { background: #fff; color: #3b2d63; transform: translateY(-2px); }
+@media (max-width: 760px) { .demo .characters img { height: 52px; } }
