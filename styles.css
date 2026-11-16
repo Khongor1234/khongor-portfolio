@@ -271,3 +271,35 @@ html[data-lang="en"] .site-header [data-set-lang="en"] { color: #f1eee6; }
 }
 .demo:hover .demo-label { background: #fff; color: #3b2d63; transform: translateY(-2px); }
 @media (max-width: 760px) { .demo .characters img { height: 52px; } }
+
+/* Stock app production status: a live card, not a demo (the app is private). */
+.status { margin: -8px 0 40px calc(var(--gutter) + 48px); padding: 22px 26px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.status-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; }
+.status-live { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #1f7a54; font-weight: 500; }
+.status-live i { position: relative; width: 9px; height: 9px; border-radius: 50%; background: #22a06b; }
+.status-live i::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #22a06b; }
+.status-since { font-size: 13px; color: var(--muted); }
+.status-track { position: relative; height: 6px; margin: 22px 0 40px; border-radius: 6px; background: var(--line); }
+.status-fill { position: absolute; inset: 0; border-radius: 6px; background: linear-gradient(90deg, #8fd3b6, #22a06b); transform-origin: left; }
+.status-tick { position: absolute; top: 12px; font-size: 11px; color: var(--muted); white-space: nowrap; }
+.status-now { right: 0; color: #1f7a54; }
+.status-body { display: grid; grid-template-columns: 1fr 1.3fr; gap: 28px; }
+.status-body p { margin: 0; text-wrap: pretty; }
+.status-label { margin-bottom: 6px !important; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.status-fixes { margin: 0; padding: 0; list-style: none; font-size: 14px; }
+.status-fixes li { position: relative; padding: 4px 0 4px 18px; }
+.status-fixes li::before { content: ""; position: absolute; left: 0; top: 0.95em; width: 8px; height: 1px; background: #22a06b; }
+.status-lock { display: flex; gap: 10px; align-items: flex-start; margin: 20px 0 0; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+.status-lock svg { flex: none; width: 14px; height: 14px; margin-top: 3px; fill: currentColor; }
+@media (prefers-reduced-motion: no-preference) {
+  .status-live i::after { animation: status-pulse 1.8s ease-out infinite; }
+  @supports (animation-timeline: view()) {
+    .status-fill { animation: status-grow linear both; animation-timeline: view(); animation-range: entry 20% cover 45%; }
+  }
+}
+@keyframes status-pulse { from { transform: scale(1); opacity: 0.6; } to { transform: scale(3); opacity: 0; } }
+@keyframes status-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (max-width: 760px) {
+  .status { margin-left: 0; padding: 18px; }
+  .status-body { grid-template-columns: 1fr; gap: 18px; }
+}

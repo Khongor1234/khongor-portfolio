@@ -121,6 +121,33 @@
         </div>
         <div class="frame" lang="ja"><iframe src="https://www.youtube-nocookie.com/embed/5LrT9G5TpbU?rel=0" title="【月額0円】母の在庫チェック1時間→10分｜家族の店のWebアプリ【ポートフォリオ v2】" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         <div class="frame" lang="en"><iframe src="https://www.youtube-nocookie.com/embed/BJmDp-TqitU?rel=0" title="$0/month: Mom's Stock Check 1 Hour to 10 Minutes - Family Shop Web App (Portfolio v2)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <section class="status" aria-label="Production status">
+          <div class="status-head">
+            <span class="status-live"><i aria-hidden="true"></i><span lang="ja">本番稼働中</span><span lang="en">In production</span></span>
+            <span class="status-since"><span lang="ja">2026年10月から毎日稼働</span><span lang="en">Running every day since October 2026</span></span>
+          </div>
+          <div class="status-track" aria-hidden="true">
+            <span class="status-fill"></span>
+            <span class="status-tick" style="left:0">10月 · Oct</span>
+            <span class="status-tick" style="left:67%">11月 · Nov</span>
+            <span class="status-tick status-now"><span lang="ja">今日</span><span lang="en">Today</span></span>
+          </div>
+          <div class="status-body">
+            <div>
+              <p class="status-label"><span lang="ja">状態</span><span lang="en">Status</span></p>
+              <p><span lang="ja">大きな障害なく安定稼働。今は細かなエッジケースの修正だけを続けています。</span><span lang="en">Stable, with no outages. The work now is small edge-case fixes.</span></p>
+            </div>
+            <div>
+              <p class="status-label"><span lang="ja">最近の修正例</span><span lang="en">Recent fixes, for example</span></p>
+              <ul class="status-fixes">
+                <li><span lang="ja">読み取りに時間がかかったレシートは、最大3回まで自動で再読み取り</span><span lang="en">A receipt that reads too slowly is retried by itself, up to three times</span></li>
+                <li><span lang="ja">削除した商品名を再入力すると、以前の価格ごと復元</span><span lang="en">Typing a removed product's name again brings it back with its prices</span></li>
+                <li><span lang="ja">二重に書かれたセルを、レシートの内容どおりに修正</span><span lang="en">Cells written twice are put back to what their receipts say</span></li>
+              </ul>
+            </div>
+          </div>
+          <p class="status-lock"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1zm2 0h6V7a3 3 0 0 0-6 0z"/></svg><span lang="ja">アプリ本体は公開していません。実際の店の在庫と売上を扱う業務システムのため、Cloudflare Access とデータベースの許可リストの二重の鍵の内側にあります。上の動画は価格と店舗情報をぼかした実際の画面です。</span><span lang="en">The app itself is not public: it holds a real shop's stock and sales, so it sits behind two locks (Cloudflare Access, then a database allowlist). The video above shows the real screens with prices and shop details blurred.</span></p>
+        </section>
         <div class="work-body">
           <p>
             <span lang="ja">家族の家電店（モンゴル）の在庫表（Google スプレッドシート＋Apps Script）を、スマホでもパソコンでも使えるWebアプリに作り直しました。スタッフがレシートを撮ると Gemini が行を読み取り、母が「正しい／関係なし」を選ぶと、母のスプレッドシートそっくりの在庫表に記入されます。表の色は操作できます。緑のセルを開くと元のレシート、チェック1つで表に反映。母は今、これなしでは作業したがりません。</span>
