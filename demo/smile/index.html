@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja" data-lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smile demo · Gombo Khongor</title>
+  <meta name="description" content="Listen to a voice copied from 10 seconds: seven voice models, one ruler with a ceiling and a floor. Public-domain LJSpeech voice, pre-rendered audio.">
+  <meta property="og:title" content="Smile demo · a voice copied from 10 seconds">
+  <meta property="og:description" content="Seven voice models on one public-domain voice, measured against a ceiling and a floor.">
+  <meta property="og:image" content="https://khongor-portfolio.vercel.app/assets/film/og.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230e1430'/%3E%3Cpath d='M14 32h6l4-10 6 22 6-26 5 20 4-6h5' fill='none' stroke='%236fb7a0' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="demo.css">
+  <script>
+    // Same language choice as the portfolio: ?lang= > saved choice > browser language.
+    (function () {
+      var lang = new URLSearchParams(location.search).get('lang');
+      if (lang !== 'ja' && lang !== 'en') {
+        try { lang = localStorage.getItem('lang'); } catch (e) { lang = null; }
+      }
+      if (lang !== 'ja' && lang !== 'en') {
+        lang = (navigator.language || '').toLowerCase().indexOf('ja') === 0 ? 'ja' : 'en';
+      }
+      document.documentElement.lang = lang;
+      document.documentElement.dataset.lang = lang;
+    })();
+  </script>
+</head>
+<body>
+  <header class="bar">
+    <a class="back" href="/#work-smile"><span aria-hidden="true">←</span> <span lang="ja">ポートフォリオ</span><span lang="en">Portfolio</span></a>
+    <span class="brand">Smile</span>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set-lang="ja">日本語</button>
+      <button type="button" data-set-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="kicker"><span lang="ja">インタラクティブ・デモ · SmartAvatar B.V. 長期インターン</span><span lang="en">Interactive demo · SmartAvatar B.V. internship</span></p>
+      <h1><span lang="ja">10秒の声から作った声を、<br>聞いてみてください。</span><span lang="en">Hear a voice<br>copied from 10 seconds.</span></h1>
+      <p class="lead"><span lang="ja">Smile の評価パイプラインが実際に出力した音声です。1人の声（10秒）から7つの音声モデルが同じ5文を話し、その声がどれだけ本人らしいかを「天井」と「床」のある物差しで測りました。</span><span lang="en">These are real outputs of Smile's evaluation pipeline. Seven voice models copy one person from a 10-second clip, say the same five sentences, and are measured on a ruler with a ceiling and a floor.</span></p>
+    </section>
+
+    <section class="card" aria-labelledby="step-reference">
+      <h2 id="step-reference"><span class="step">1</span><span lang="ja">コピー元の声（10秒）</span><span lang="en">The voice we copy (10 s)</span></h2>
+      <div class="player player--hero" data-player="reference"></div>
+      <p class="caption">“in being comparatively modern for although the chinese took impressions from wood blocks engraved in relief for centuries before the wood-cutters of the netherlands”</p>
+      <p class="fine"><span lang="ja">LJSpeech（パブリックドメイン）の話者。実在の参加者の声は使っていません。</span><span lang="en">An LJSpeech speaker (public domain). No real participant's voice is used on this page.</span></p>
+    </section>
+
+    <section class="card" aria-labelledby="step-sentence">
+      <h2 id="step-sentence"><span class="step">2</span><span lang="ja">文を選ぶ</span><span lang="en">Pick a sentence</span></h2>
+      <div class="chips" role="radiogroup" aria-labelledby="step-sentence" data-sentences></div>
+      <p class="sentence" data-sentence-text aria-live="polite"></p>
+    </section>
+
+    <section class="card" aria-labelledby="step-model">
+      <h2 id="step-model"><span class="step">3</span><span lang="ja">モデルを押して聞き比べる</span><span lang="en">Press a model to hear it</span></h2>
+      <div class="legend" aria-hidden="true">
+        <span><span lang="ja">本人らしさ（天井比）</span><span lang="en">Likeness (of ceiling)</span></span>
+        <span><span lang="ja">文字誤り</span><span lang="en">Letter errors</span></span>
+        <span><span lang="ja">速さ</span><span lang="en">Speed</span></span>
+      </div>
+      <ol class="models" data-models></ol>
+    </section>
+
+    <section class="card" aria-labelledby="step-ruler">
+      <h2 id="step-ruler"><span class="step">4</span><span lang="ja">物差し：天井と床</span><span lang="en">The ruler: ceiling and floor</span></h2>
+      <p class="lead small"><span lang="ja">本人の別の録音どうしの近さ（天井 0.889）と、別人どうしの近さ（床 0.112）を必ず一緒に測ります。点を押すと、その声が流れます。</span><span lang="en">Every score sits between the same person's other recordings (ceiling, 0.889) and other people (floor, 0.112). Press a dot to hear that voice.</span></p>
+      <div class="ruler" data-ruler></div>
+      <div class="held">
+        <p class="fine"><span lang="ja">耳を合わせる：本人の別の録音</span><span lang="en">Tune your ear: the same speaker's other recordings</span></p>
+        <div class="held-row" data-held></div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p><span lang="ja">このページは録音済みの音声を再生するだけで、サーバーもAIキーも使いません。実際のアプリは、誰かの声を録音する前に必ず本人の同意を取ります。</span><span lang="en">This page only plays pre-rendered audio: no server and no AI key. The real app asks for the speaker's consent before it records anyone.</span></p>
+      <p><a href="/#work-smile"><span lang="ja">← ポートフォリオに戻る</span><span lang="en">← Back to the portfolio</span></a></p>
+    </footer>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="demo.js"></script>
+</body>
+</html>
